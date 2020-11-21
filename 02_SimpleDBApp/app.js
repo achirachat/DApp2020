@@ -4,14 +4,14 @@ const db = mysql.createConnection({
     host: 'localhost',
     user: 'fintech',
     password: 'P@ssw0rd',
-    database: 'simpledbapp'
+    database: 'fintech'
 })
 
 db.connect() 
 const app = express() 
 
 app.get('/accounts', (req, res) => {   
-    let sql = 'SELECT * FROM accounts'  
+    let sql = 'SELECT * FROM students'  
     let query = db.query(sql, (err, results) => { 
         if (err) throw err    
         console.log(results)
